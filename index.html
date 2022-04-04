@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+</head>
+<body>
+    <div class="container">
+        <div class="players">
+            <div class="player--0">
+                <h2>Soma de cartas - Jogagador 1:</h2>
+                <h2 id="current--0">0</h2>
+                <br>
+                <h2 id="player--0--Status"></h2>
+            </div>
+            <div class="player--1">
+                <h2>Soma de cartas - Jogagador 2:</h2>
+                <h2 id="current--1">0</h2>
+                <br>
+                <h2 id="player--1--Status"></h2>
+            </div>
+        </div>
+        <div class="controlButtons">
+            <div onclick="checkUserAndSumPoints(parseInt(document.getElementById('card--1').innerHTML), 1)">
+                <h2 id="card--1"></h2>
+            </div>
+            <div onclick="checkUserAndSumPoints(parseInt(document.getElementById('card--2').innerHTML), 2)">
+                <h2 id="card--2"></h2>
+            </div>
+            <div onclick="checkUserAndSumPoints(parseInt(document.getElementById('card--3').innerHTML), 3)">
+                <h2 id="card--3"></h2>
+            </div>
+        </div>
+        <button onclick="continuePlaying()">Continuar Jogando</button>
+        <button onclick="changePlayer()">Passar a Vez</button>
+        <button onclick="restartGame()">Reiniciar o Jogo</button>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
